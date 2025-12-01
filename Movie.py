@@ -23,8 +23,8 @@ ps = PorterStemmer()
 @st.cache_data
 def build_model():
     # Direct paths to CSVs
-    movies = pd.read_csv(r'C:\Users\HP\Downloads\tmdb_5000_movies.csv')
-    credits = pd.read_csv(r'C:\Users\HP\Downloads\tmdb_5000_credits.csv')
+    movies = pd.read_csv("movies/tmdb_5000_movies.csv")
+    credits = pd.read_csv("credits/tmdb_5000_credits.csv")
 
     # Merge and select columns
     movies = movies.merge(credits, on="title")
